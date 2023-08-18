@@ -1,38 +1,165 @@
-.App {
+.app {
+  background-color: #136cb1;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.top {
+  width: -webkit-fill-available;
   text-align: center;
+  color: #63b2ef;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 5px;
+  width: 80%;
+  aspect-ratio: 1;
+  max-width: 400px;
+  background-color: #0a4470;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.board > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4em;
+  background-color: #136cb1;
+  cursor: pointer;
+}
+
+.none {
+  display: none
+}
+
+.span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.background {
+  background-color: #000000;
+  opacity: 50%;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  position: inherit;
+}
+
+.menu {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 50px;
+  background-color: #136cb1;
+  border: 5px solid #63b2ef;
+  opacity: 85%;
+  z-index: 1;
+}
+
+.winner {
+  font-size: 1.5em;
+  color: wheat;
+}
+
+.winnerIcon {
+  font-size: 8em;
+}
+
+.buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons > button {
+  width: 12rem;
+  height: 2.5rem;
+  border: 2px solid #0a4470;
+  border-radius: 15px;
+  color: wheat;
+  background-color: #136cb1;
+  font-size: 0.9em;
+}
+
+.buttons > button:hover {
+  background-color: #63b2ef;
+}
+
+.points {
+  background-color: #0a4470;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+
+.player, .games{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+.player-1, .player-x .playerPoints {
+  color: orange
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-2, .player-0 .playerPoints {
+  color: yellow
+}
+
+.playing {
+  color: #63b2ef;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.playing > div {
+  padding-right: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.playerName, .gamesP {
+  color: #bfbfcf
+}
+
+.quantityGames {
+  margin: 0;
+  font-size: 3em;
+  color: #63b2ef;
+}
+
+.playerPoints {
+  font-size: 3em;
+  margin: 0;
 }
