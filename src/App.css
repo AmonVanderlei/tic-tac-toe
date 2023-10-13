@@ -1,6 +1,7 @@
 .app {
   background-color: #136cb1;
   height: 100vh;
+  font-size: 1.5rem;
 
   display: flex;
   flex-direction: column;
@@ -89,19 +90,20 @@
 }
 
 .buttons {
-  width: 50%;
+  width: -webkit-fill-available;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .buttons > button {
-  width: 12rem;
+  width: inherit;
   height: 2.5rem;
   border: 2px solid #0a4470;
   border-radius: 15px;
   color: wheat;
   background-color: #136cb1;
   font-size: 0.9em;
+  margin: 0 1%;
 }
 
 .buttons > button:hover {
