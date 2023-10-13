@@ -1,7 +1,7 @@
 .app {
   background-color: #136cb1;
   height: 100vh;
-  font-size: 1.5rem;
+  font-size: 1rem;
 
   display: flex;
   flex-direction: column;
